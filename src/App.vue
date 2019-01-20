@@ -1,25 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <transition :name="transitionName">
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
+    </transition>
   </div>
 </template>
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
 
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
-</style>
+<script type="text/ecmascript-6">
+export default {
+  name: 'app',
+  data () {
+    return {
+      transitionName: ''
+    }
+  },
+  watch: {
+    $route (to, from) {
+      // 这里对应着路由定义里面的值
+      if (to.meta.index !== undefined && from.meta.index !== undefined) {
+        if (to.meta.index > from.meta.index) {
+          this.transitionName = 'slide-left'
+        } else if (to.meta.index < from.meta.index) {
+          this.transitionName = 'slide-right'
+        } else {
+          this.transitionName = ''
+        }
+      }
+    }
+  }
+}
+</script>
+
+<style lang="stylus"></style>
