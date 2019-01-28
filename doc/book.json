@@ -3,10 +3,11 @@
   "description": "Vue 项目移动端团队开发规范",
   "language": "zh",
   "plugins": [
-    "expandable-chapters"
+    "expandable-chapters",
+    "prism"
   ],
   "pdf": {
-    "fontSize": 12,
+    "fontSize": 14,
     "footerTemplate": null,
     "headerTemplate": null,
     "margin": {
@@ -15,7 +16,7 @@
       "right": 62,
       "top": 36
     },
-    "pageNumbers": false,
+    "pageNumbers": true,
     "paperSize": "a4"
   }
 }

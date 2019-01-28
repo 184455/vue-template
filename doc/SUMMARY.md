@@ -3,8 +3,6 @@
 * [介绍](README.md)
 
 * [数据中心](store/README.md)
-
-    * [Index](store/_index.md)
     
     * [State](store/state.md)
 
@@ -12,9 +10,11 @@
     
     * [Mutation.types](store/mutations.types.md)
     
+    * [Actions](store/actions.md)
+    
     * [Getters](store/getters.md)
     
-    * [Actions](store/actions.md)
+    * [Index](store/_index.md)
 
 * [首页介绍](home/view-home.md)
 
