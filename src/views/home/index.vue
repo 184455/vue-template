@@ -3,10 +3,10 @@
     <!--只放置需要滚动的内容-->
     <scroll
       ref="scrollWrap"
-      class="home-scroll-warp"
       :data="homeData"
       :pullDownRefresh="true"
       :pullUpLoad="true"
+      class="home-scroll-warp"
       @pullingDown="pullingDownGetNewData"
       @pullingUp="pullingUpGetMore"
     >
